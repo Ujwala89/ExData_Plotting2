@@ -20,20 +20,26 @@ The zip file contains two files:
 PM2.5 Emissions Data (summarySCC_PM25.rds): This file contains a data frame with all of the PM2.5 emissions data for 1999, 2002, 2005, and 2008.
 For each year, the table contains number of tons of PM2.5 emitted from a specific type of source for the entire year. Here are the first few rows.
 
-<li><b>#   fips      SCC  Pollutant Emissions  type year</li>
-<li>4  09001 10100401  PM25-PRI    15.714 POINT 1999</li>
-<li>8  09001 10100404  PM25-PRI   234.178 POINT 1999</li>
-<li>12 09001 10100501  PM25-PRI     0.128 POINT 1999</li>
-<li>16 09001 10200401  PM25-PRI     2.036 POINT 1999</li>
-<li>20 09001 10200504  PM25-PRI     0.388 POINT 1999</li>
-<li>24 09001 10200602  PM25-PRI     1.490 POINT 1999</li>
+size  material      color
+----  ------------  ------------
+9     leather       brown
+10    hemp canvas   natural
+11    glass         transparent
 
-<li>fips: A five-digit number (represented as a string) indicating the U.S. county</li>
-<li>SCC: The name of the source as indicated by a digit string (see source code classification table)</li>
-<li>Pollutant: A string indicating the pollutant</li>
-<li>Emissions: Amount of PM2.5 emitted, in tons</li>
-<li>type: The type of source (point, non-point, on-road, or non-road)</li>
-<li>year: The year of emissions recorded</li>
+#   fips      SCC  Pollutant Emissions  type year
+-- ----- --------  --------- --------- ----- ----
+8  09001 10100404   PM25-PRI   234.178 POINT 1999
+12 09001 10100501   PM25-PRI     0.128 POINT 1999
+16 09001 10200401   PM25-PRI     2.036 POINT 1999
+20 09001 10200504   PM25-PRI     0.388 POINT 1999
+24 09001 10200602   PM25-PRI     1.490 POINT 1999
+
+1. fips: A five-digit number (represented as a string) indicating the U.S. county
+2. SCC: The name of the source as indicated by a digit string (see source code classification table)
+3. Pollutant: A string indicating the pollutant
+4. Emissions: Amount of PM2.5 emitted, in tons
+5. type: The type of source (point, non-point, on-road, or non-road)
+6. year: The year of emissions recorded
 
 
 Source Classification Code Table (Source_Classification_Code.rds): This table provides a mapping from the SCC digit strings in the Emissions table to the actual name of the PM2.5 source. The sources are categorized in a few different ways from more general to more specific and you may choose to explore whatever categories you think are most useful. For example, source “10100101” is known as “Ext Comb /Electric Gen /Anthracite Coal /Pulverized Coal”.
