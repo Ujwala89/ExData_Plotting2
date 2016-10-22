@@ -21,19 +21,19 @@ PM2.5 Emissions Data (summarySCC_PM25.rds): This file contains a data frame with
 For each year, the table contains number of tons of PM2.5 emitted from a specific type of source for the entire year. Here are the first few rows.
 
 <li><b>#   fips      SCC  Pollutant Emissions  type year</li>
-<li><b>4  09001 10100401  PM25-PRI    15.714 POINT 1999</li>
-<li><b>8  09001 10100404  PM25-PRI   234.178 POINT 1999</li>
-<li><b>12 09001 10100501  PM25-PRI     0.128 POINT 1999</li>
-<li><b>16 09001 10200401  PM25-PRI     2.036 POINT 1999</li>
-<li><b>20 09001 10200504  PM25-PRI     0.388 POINT 1999</li>
-<li><b>24 09001 10200602  PM25-PRI     1.490 POINT 1999</li>
+<li>4  09001 10100401  PM25-PRI    15.714 POINT 1999</li>
+<li>8  09001 10100404  PM25-PRI   234.178 POINT 1999</li>
+<li>12 09001 10100501  PM25-PRI     0.128 POINT 1999</li>
+<li>16 09001 10200401  PM25-PRI     2.036 POINT 1999</li>
+<li>20 09001 10200504  PM25-PRI     0.388 POINT 1999</li>
+<li>24 09001 10200602  PM25-PRI     1.490 POINT 1999</li>
 
-<li><b>fips: A five-digit number (represented as a string) indicating the U.S. county</li>
-<li><b>SCC: The name of the source as indicated by a digit string (see source code classification table)</li>
-<li><b>Pollutant: A string indicating the pollutant</li>
-<li><b>Emissions: Amount of PM2.5 emitted, in tons</li>
-<li><b>type: The type of source (point, non-point, on-road, or non-road)</li>
-<li><b>year: The year of emissions recorded</li>
+<li>fips: A five-digit number (represented as a string) indicating the U.S. county</li>
+<li>SCC: The name of the source as indicated by a digit string (see source code classification table)</li>
+<li>Pollutant: A string indicating the pollutant</li>
+<li>Emissions: Amount of PM2.5 emitted, in tons</li>
+<li>type: The type of source (point, non-point, on-road, or non-road)</li>
+<li>year: The year of emissions recorded</li>
 
 
 Source Classification Code Table (Source_Classification_Code.rds): This table provides a mapping from the SCC digit strings in the Emissions table to the actual name of the PM2.5 source. The sources are categorized in a few different ways from more general to more specific and you may choose to explore whatever categories you think are most useful. For example, source “10100101” is known as “Ext Comb /Electric Gen /Anthracite Coal /Pulverized Coal”.
@@ -41,8 +41,8 @@ You can read each of the two files using the readRDS() function in R. For exampl
 
 This first line will likely take a few seconds. Be patient!
 
-<li><b>NEI <- readRDS("summarySCC_PM25.rds")<li>
-<li><b>SCC <- readRDS("Source_Classification_Code.rds")<li>
+* NEI <- readRDS("summarySCC_PM25.rds")
+* SCC <- readRDS("Source_Classification_Code.rds")
 
 as long as each of those files is in your current working directory (check by calling dir() and see if those files are in the listing).
 
@@ -54,19 +54,19 @@ The overall goal of this assignment is to explore the National Emissions Invento
 
 You must address the following questions and tasks in your exploratory analysis. For each question/task you will need to make a single plot. Unless specified, you can use any plotting system in R to make your plot.
 
-<li><b>1.Have total emissions from PM2.5 decreased in the United States from 1999 to 2008? Using the base plotting system, make a plot showing the total PM2.5 emission from all sources for each of the years 1999, 2002, 2005, and 2008.</li>
-<li><b>2.Have total emissions from PM2.5 decreased in the Baltimore City, Maryland (fips == "24510") from 1999 to 2008? Use the base plotting system to make a plot answering this question.</li>
-<li><b>3.Of the four types of sources indicated by the type (point, nonpoint, onroad, nonroad) variable, which of these four sources have seen decreases in emissions from 1999–2008 for Baltimore City? Which have seen increases in emissions from 1999–2008? Use the ggplot2 plotting system to make a plot answer this question.
-<li><b>4.Across the United States, how have emissions from coal combustion-related sources changed from 1999–2008?</li>
-<li><b>5.How have emissions from motor vehicle sources changed from 1999–2008 in Baltimore City?</li>
-<li><b>6.Compare emissions from motor vehicle sources in Baltimore City with emissions from motor vehicle sources in Los Angeles County, California (fips == "06037"). Which city has seen greater changes over time in motor vehicle emissions?</li>
+ 1. Have total emissions from PM2.5 decreased in the United States from 1999 to 2008? Using the base plotting system, make a plot showing the total PM2.5 emission from all sources for each of the years 1999, 2002, 2005, and 2008.
+ 2. Have total emissions from PM2.5 decreased in the Baltimore City, Maryland (fips == "24510") from 1999 to 2008? Use the base plotting system to make a plot answering this question.
+ 3. Of the four types of sources indicated by the type (point, nonpoint, onroad, nonroad) variable, which of these four sources have seen decreases in emissions from 1999–2008 for Baltimore City? Which have seen increases in emissions from 1999–2008? Use the ggplot2 plotting system to make a plot answer this question.
+ 4. Across the United States, how have emissions from coal combustion-related sources changed from 1999–2008?
+ 5. How have emissions from motor vehicle sources changed from 1999–2008 in Baltimore City?
+ 6. Compare emissions from motor vehicle sources in Baltimore City with emissions from motor vehicle sources in Los Angeles County, California (fips == "06037"). Which city has seen greater changes over time in motor vehicle emissions?
 
 ##Making and Submitting Plotsless 
 
 For each plot you should
 
-<li><b>1.Construct the plot and save it to a PNG file.</li>
-<li><b>2.Create a separate R code file (plot1.R, plot2.R, etc.) that constructs the corresponding plot, i.e. code in plot1.R constructs the plot1.png plot. Your code file should include code for reading the data so that the plot can be fully reproduced. You must also include the code that creates the PNG file. Only include the code for a single plot (i.e. plot1.R should only include code for producing plot1.png)</li>
-<li><b>3.Upload the PNG file on the Assignment submission page</li>
-<li><b>4.Copy and paste the R code from the corresponding R file into the text box at the appropriate point in the peer assessment.</li>
+ 1. Construct the plot and save it to a PNG file
+ 2. Create a separate R code file (plot1.R, plot2.R, etc.) that constructs the corresponding plot, i.e. code in plot1.R constructs the plot1.png plot. Your code file should include code for reading the data so that the plot can be fully reproduced. You must also include the code that creates the PNG file. Only include the code for a single plot (i.e. plot1.R should only include code for producing plot1.png)
+ 3. Upload the PNG file on the Assignment submission page
+ 4. Copy and paste the R code from the corresponding R file into the text box at the appropriate point in the peer assessment.
 
