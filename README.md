@@ -28,6 +28,12 @@ No |  fips |      SCC |  Pollutant | Emissions |  type | year
 20 | 09001 | 10200504 | PM25-PRI | 0.388 | POINT | 1999 
 24 | 09001 | 10200602 | PM25-PRI | 1.490 | POINT | 1999 
 
+No | fips 
+-- | -----
+8  | 09001
+12 | 09001
+
+
 
 First Header | Second Header
 ------------ | -------------
