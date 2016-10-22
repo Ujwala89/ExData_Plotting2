@@ -7,8 +7,8 @@ For each year and for each type of PM source, the NEI records how many tons of P
 #Review criteria 
 For each question
 
-1.Does the plot appear to address the question being asked?
-2.Is the submitted R code appropriate for construction of the submitted plot?
+<li>Does the plot appear to address the question being asked?</li>
+<li>Is the submitted R code appropriate for construction of the submitted plot?</li>
 
 #Data
 The data for this assignment are available from the course web site as a single zip file:
